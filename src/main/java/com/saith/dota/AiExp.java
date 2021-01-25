@@ -15,7 +15,7 @@ import java.util.*;
  */
 public class AiExp {
 
-    public static Map<String, String> BASE_MAP = new HashMap<>();
+    public static Map<String, String> BASE_MAP = new HashMap<>(32);
 
     static {
         BASE_MAP.put("1_1", "69");
@@ -123,7 +123,6 @@ public class AiExp {
             }
         }
     }
-
 
     private static <T> T parseCommand(String[] args, Class<T> tClass) {
         JCommander commander = JCommander.newBuilder().build();
