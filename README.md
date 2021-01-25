@@ -1,2 +1,2 @@
 # dota2_ai_script
-dota2 ai npc_units文件 按照经验金钱 修改倍率
+dota2 ai 对npc_units文件 按照倍率修改 经验 金钱
