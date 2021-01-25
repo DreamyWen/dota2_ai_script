@@ -60,6 +60,7 @@ public class AiExp {
 //        String[] argv = {"-input", "/Users/saith/GitHub/dota_ai/src/main/resources/dota/npc_units.txt", "-multiple", "4"};
         DotaUnit dotaUnit = parseCommand(args, DotaUnit.class);
         if (dotaUnit == null) {
+            System.out.println("命令解析失败 请确认输入参数...");
             return;
         }
 
@@ -68,6 +69,7 @@ public class AiExp {
             fileName = CommonUtils.getFileName(dotaUnit.getInputPath());
         } catch (InvalidPathException e) {
             System.out.println("文件不存在: " + dotaUnit.getInputPath());
+            return;
         }
 
         System.out.println("修改为倍率: " + dotaUnit.getMultiple());
